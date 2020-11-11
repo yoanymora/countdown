@@ -1,0 +1,63 @@
+.aw-vertical-align{
+    background-color: rgba(0,0,0,0.7);
+    height: 100vh;
+    color: white;
+}
+
+.aw-heading{
+    font-size: 4em;
+    font-weight: 900;
+    letter-spacing: -0.4px;
+    margin-bottom: 30px;
+}
+
+.aw-digit{
+    padding: 2em;
+}
+
+.aw-ending{
+    color: rgb(177, 13, 13);
+    letter-spacing: -0.4px;
+
+}
+
+#btnAboutUs{
+    border: 2px solid red;
+}
+
+#btnRemindMe{
+    border: 2px solid #f8f9fa;
+}
+
+.btn-danger:hover{
+    background: transparent;
+}
+
+.btn-light:hover{
+    background: transparent;
+    color: white;
+}
+
+.aw-enterprise-title{
+    font-weight: 700;
+}
+
+.navbar{
+    background: rgba(0,0,0,0.8) !important;
+}
+
+#home-section{
+    background: url('../img/acid.jpg') no-repeat;
+    background-size: cover;
+    /* height: 100vh; */
+    /* width: 100%; */
+}
+
+#showAbout{
+    background: transparent;
+}
+
+.model-dialog{
+    min-height: calc(100vh - 60px);
+    overflow: auto;
+}
