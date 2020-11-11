@@ -4,11 +4,20 @@
     color: white;
 }
 
+a{
+    color: white;
+}
+
+a:hover{
+    color: red;
+}
+
 .aw-heading{
-    font-size: 4em;
+    font-size: 2em;
     font-weight: 900;
     letter-spacing: -0.4px;
     margin-bottom: 30px;
+    margin-top: 1em;
 }
 
 .aw-digit{
@@ -18,7 +27,6 @@
 .aw-ending{
     color: rgb(177, 13, 13);
     letter-spacing: -0.4px;
-
 }
 
 #btnAboutUs{
@@ -38,10 +46,6 @@
     color: white;
 }
 
-.aw-enterprise-title{
-    font-weight: 700;
-}
-
 .navbar{
     background: rgba(0,0,0,0.8) !important;
 }
@@ -49,8 +53,7 @@
 #home-section{
     background: url('../img/acid.jpg') no-repeat;
     background-size: cover;
-    /* height: 100vh; */
-    /* width: 100%; */
+    height: 100vh;
 }
 
 #showAbout{
@@ -60,4 +63,26 @@
 .model-dialog{
     min-height: calc(100vh - 60px);
     overflow: auto;
+}
+
+@media (min-width: 350px) {
+    .aw-heading {
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+        margin: 1em;
+    }
+}
+
+@media (min-width: 760px) {
+    .navbar{
+        background: transparent !important;
+    }
+
+    .aw-heading {
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        margin: 1em;
+    }
 }
