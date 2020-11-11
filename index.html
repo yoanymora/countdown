@@ -3,11 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Countdown Practice</title>
 </head>
 <body>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand text-uppercase text-light">Let's get creat<span class="aw-ending">ive</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#" data-toggle="modal" data-target="#newsletterModal" class="nav-link">Remind me to get creative!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" data-toggle="collapse" data-target="#showAbout" aria-expanded="false" aria-controls="showAbout">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-toggle="modal" data-target="#contactusModal" href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="home-section">
+        <div class="d-flex flex-column align-items-center justify-content-center aw-vertical-align">
+            <h1 class="text-uppercase aw-heading">Let's get creat<span class="aw-ending">ive</span>!</h1>
+            <p class="text-lowercase">Coming to your brain in</p>
+            <div id="contdown" class="row my-sm-3 aw-contdown">
+                <div class="col-3 d-flex flex-column align-items-center">
+                    <h3 id="time-days">00</h3>
+                    <p>Days</p>
+                </div>
+                <div class="col-3 d-flex flex-column align-items-center">
+                    <h3 id="time-hours">00</h3>
+                    <p>Hours</p>
+                </div>
+                <div class="col-3 d-flex flex-column align-items-center">
+                    <h3 id="time-minutes">00</h3>
+                    <p>Minutes</p>
+                </div>
+                <div class="col-3 d-flex flex-column align-items-center">
+                    <h3 id="time-seconds">00</h3>
+                    <p>Seconds</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" id="btnRemindMe" class="rounded-1 btn btn-light" data-toggle="modal" data-target="#newsletterModal">Remind me!</button>
+                </div>
+                <div class="col">
+                    <button type="button"  id="btnAboutUs" class="btn btn-danger rounded-1" data-toggle="collapse" data-target="#showAbout" aria-controls="showAbout" aria-expanded="false">About us</button>
+                </div>
+            </div>
+            <div class="collapse mt-2 mt-sm-5" id="showAbout">
+                <div class="text-center border-light border  aw-about p-2 p-sm-3">
+                    <a href="https://www.youtube.com/watch?v=9C_HReR_McQ">Click here to remind yourself what "get creative" means</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter modal -->
+    <div class="modal fade" id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="newsletterModal" aria-hidden="true">
+        <div class="modal-dialog justify-content-center d-flex flex-column aw-modal-newsletter" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Newsletter</h5>
+                    <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" placeholder=" enter your email" aria-label="enter your email" class="form-contol rounded-0">
+                                <span class="input-group-btn">
+                                    <button class="btn-danger btn-danger-override text-uppercase rounded-0">
+                                        Send
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact us modal -->
+    <div class="modal fade" id="contactusModal" tabindex="-1" role="dialog" aria-labelledby="contactusModal" aria-hidden="true">
+        <div class="modal-dialog d-flex flex-column justify-content-center aw-modal-newsletter" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Send us a message (:</h5>
+                    <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <textarea id="contactusmessage" cols="5" rows="3" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" placeholder=" enter your email" aria-label="enter your email" class="form-contol rounded-0">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-danger btn-danger-override text-uppercase rounded-0">
+                                        Send
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/countdown.js"></script>
 </body>
 </html>
